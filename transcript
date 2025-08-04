@@ -1,0 +1,167 @@
+# do {scripts\run_soc_simulation.do}
+# Compiling ARM Cortex M0 core...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 src/arm_cortex_m0.v 
+# -- Compiling module arm_cortex_m0
+# 
+# Top level modules:
+# 	arm_cortex_m0
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compiling memory peripheral...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 src/memory_peripheral.v 
+# -- Compiling module memory_peripheral
+# 
+# Top level modules:
+# 	memory_peripheral
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compiling timer peripheral...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 src/timer_peripheral.v 
+# -- Compiling module timer_peripheral
+# 
+# Top level modules:
+# 	timer_peripheral
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compiling LED GPIO peripheral...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 src/led_gpio_peripheral.v 
+# -- Compiling module led_gpio_peripheral
+# 
+# Top level modules:
+# 	led_gpio_peripheral
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compiling SoC top module...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 src/soc_top.v 
+# -- Compiling module soc_top
+# 
+# Top level modules:
+# 	soc_top
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compiling testbench...
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:23 on Aug 01,2025
+# vlog -reportprogress 300 testbench/tb_soc_top.v 
+# -- Compiling module tb_soc_top
+# 
+# Top level modules:
+# 	tb_soc_top
+# End time: 16:55:23 on Aug 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Starting simulation with SoC testbench...
+# vsim work.tb_soc_top 
+# Start time: 16:55:23 on Aug 01,2025
+# Loading work.tb_soc_top
+# Loading work.soc_top
+# Loading work.arm_cortex_m0
+# Loading work.timer_peripheral
+# Loading work.led_gpio_peripheral
+# Loading work.memory_peripheral
+# Setting up VCD file dumping...
+# Adding waveforms...
+# 1
+# 1
+# Running simulation - this will NEVER ask about finish!
+# Phase 1: Reset and initialization...
+# === ARM Cortex M0 SoC Testbench ===
+# Time: 0
+# Testing timer countdown and interrupt functionality
+# ** Warning: (vsim-PLI-3110) $dumpfile : This task can be called only once. Please use $fdumpfile()
+# for multiple files.
+#    Time: 0 ps  Iteration: 0  Process: /tb_soc_top/#INITIAL#140 File: testbench/tb_soc_top.v Line: 141
+# Reset released at time 100000
+# Time=100000 | Timer=0f | Interrupt=0 | LED=00 | RAM_Data=00000000
+# 0 ps
+# 2100 ns
+# Phase 2: CPU operations and memory access...
+# Test cycle 100: Timer count = 0f
+# Test cycle 200: Timer count = 0f
+# Time=5210000 | Timer=0e | Interrupt=0 | LED=00 | RAM_Data=00000000
+# Test cycle 300: Timer count = 0e
+# 0 ps
+# 7350 ns
+# Phase 3: Timer peripheral testing...
+# Test cycle 400: Timer count = 0e
+# Test cycle 500: Timer count = 0e
+# Time=10330000 | Timer=0d | Interrupt=0 | LED=00 | RAM_Data=00000000
+# 0 ps
+# 12600 ns
+# Phase 4: GPIO and LED operations...
+# Test cycle 600: Timer count = 0d
+# Test cycle 700: Timer count = 0d
+# Time=15450000 | Timer=0c | Interrupt=0 | LED=00 | RAM_Data=00000000
+# Test cycle 800: Timer count = 0c
+# 0 ps
+# 17850 ns
+# Phase 5: Extended operation test...
+# Test cycle 900: Timer count = 0c
+# Test cycle 1000: Timer count = 0c
+# 
+# === Test Summary ===
+# Final timer count: 0c
+# Final LED output: 00
+# Total test cycles: 1000
+# 
+# Continuing test to observe multiple timer cycles...
+# Time=20570000 | Timer=0b | Interrupt=0 | LED=00 | RAM_Data=00000000
+# Time=25690000 | Timer=0a | Interrupt=0 | LED=00 | RAM_Data=00000000
+# 0 ps
+# 28350 ns
+# =========================================
+# ARM CORTEX M0 SOC SIMULATION COMPLETED!
+# Total time: ~27us
+# NO finish calls, NO crash dialogs!
+# All SoC functionality demonstrated
+# Check waveforms and transcript
+# VCD file saved: results_dump/soc_simulation.vcd
+# =========================================
+# ** UI-Msg: (vsim-4002) Invalid keyword 'close'. Expected 'add', 'checkpoint', 'comment', 'dumpports', 'dumpportsall', 'dumpportsflush', 'dumpportslimit', 'dumpportsoff', 'dumpportson', 'file', 'files', 'flush', 'limit', 'off', or 'on'.
+# Usage:
+#   vcd add <arguments>
+#   vcd checkpoint <arguments>
+#   vcd comment <arguments>
+#   vcd dumpports <arguments>
+#   vcd dumpportsall <arguments>
+#   vcd dumpportsflush <arguments>
+#   vcd dumpportslimit <arguments>
+#   vcd dumpportsoff <arguments>
+#   vcd dumpportson <arguments>
+#   vcd file <arguments>
+#   vcd files <arguments>
+#   vcd flush <arguments>
+#   vcd limit <arguments>
+#   vcd off <arguments>
+#   vcd on <arguments>
+# Error in macro ./scripts/run_soc_simulation.do line 115
+# ** UI-Msg: (vsim-4002) Invalid keyword 'close'. Expected 'add', 'checkpoint', 'comment', 'dumpports', 'dumpportsall', 'dumpportsflush', 'dumpportslimit', 'dumpportsoff', 'dumpportson', 'file', 'files', 'flush', 'limit', 'off', or 'on'.
+# Usage:
+#   vcd add <arguments>
+#   vcd checkpoint <arguments>
+#   vcd comment <arguments>
+#   vcd dumpports <arguments>
+#   vcd dumpportsall <arguments>
+#   vcd dumpportsflush <arguments>
+#   vcd dumpportslimit <arguments>
+#   vcd dumpportsoff <arguments>
+#   vcd dumpportson <arguments>
+#   vcd file <arguments>
+#   vcd files <arguments>
+#   vcd flush <arguments>
+#   vcd limit <arguments>
+#   vcd off <arguments>
+#   vcd on <arguments>
+#     while executing
+# "vcd close"
+# End time: 17:06:20 on Aug 01,2025, Elapsed time: 0:10:57
+# Errors: 0, Warnings: 1
